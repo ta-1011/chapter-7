@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 import { API_BASE_URL } from "../../constants";
 import Input from "../../components/ui/Input";
 import ErrorMessage from "../../components/ui/ErrorMessage";
@@ -55,7 +55,7 @@ const Contact = () => {
 
   // 送信の処理
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!valid()) return;
