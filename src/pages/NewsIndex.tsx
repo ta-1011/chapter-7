@@ -58,7 +58,7 @@ const NewsIndex = () => {
           {posts.map((post) => {
             return (
               <li className="p-6 mb-8 border">
-                <Link to={`/posts/${post.id}`}>
+                <Link to={`/post/${post.id}`}>
                   <div className="flex justify-between">
                     <time>
                       {new Date(post.createdAt).toLocaleDateString("ja-JP")}

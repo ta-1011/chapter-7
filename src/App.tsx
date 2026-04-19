@@ -12,7 +12,7 @@ function App() {
         <Routes>
           <Route element={<BaseLayout />}>
             <Route path="/" element={<NewsIndex />}></Route>
-            <Route path="/posts/:id" element={<NewsDetail />}></Route>
+            <Route path="/post/:id" element={<NewsDetail />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
           </Route>
         </Routes>
