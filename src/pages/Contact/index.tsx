@@ -100,7 +100,7 @@ const Contact = () => {
               type="text"
               value={name}
               id="name"
-              onChange={(value: string) => setName(value)}
+              onChange={(e) => setName(e.target.value)}
             />
             <ErrorMessage message={nameErrorMessage} />
           </div>
@@ -114,7 +114,7 @@ const Contact = () => {
               type="email"
               value={email}
               id="email"
-              onChange={(value: string) => setEmail(value)}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <ErrorMessage message={emailErrorMessage} />
           </div>
@@ -125,10 +125,9 @@ const Contact = () => {
           </label>
           <div className="w-full">
             <TextArea
-              type="text"
               value={message}
               id="message"
-              onChange={(value: string) => setMessage(value)}
+              onChange={(e) => setMessage(e.target.value)}
             />
             <ErrorMessage message={messageErrorMessage} />
           </div>

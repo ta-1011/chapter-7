@@ -4,11 +4,7 @@ type Props = {
 
 const ErrorMessage = (props: Props) => {
   if (props.message) {
-    return (
-      <>
-        <p>{props.message}</p>
-      </>
-    );
+    return <p>{props.message}</p>;
   }
 };
 
