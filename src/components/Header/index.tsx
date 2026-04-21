@@ -3,15 +3,15 @@ import styles from "./style.module.css";
 
 const Header = () => {
   return (
-    <header className={`${styles.header}`}>
+    <header className={styles.header}>
       <ul className="flex justify-between">
         <li>
-          <Link className={`${styles.header_link}`} to="/">
+          <Link className={styles.header_link} to="/">
             Blog
           </Link>
         </li>
         <li>
-          <Link className={`${styles.header_link}`} to="/contact">
+          <Link className={styles.header_link} to="/contact">
             お問い合わせ
           </Link>
         </li>
