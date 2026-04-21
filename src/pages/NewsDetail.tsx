@@ -1,15 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { API_BASE_URL } from "../constants";
-
-type Post = {
-  id: number;
-  title: string;
-  thumbnailUrl: string;
-  createdAt: string | number;
-  categories: string[];
-  content: string;
-};
+import type { Post } from "../types/posts";
 
 const NewsDetail = () => {
   const { id } = useParams();

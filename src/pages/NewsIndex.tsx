@@ -1,15 +1,7 @@
 import { useEffect, useState } from "react";
 import { API_BASE_URL } from "../constants";
 import { Link } from "react-router-dom";
-
-type Post = {
-  id: number;
-  title: string;
-  thumbnailUrl: string;
-  createdAt: string | number;
-  categories: string[];
-  content: string;
-};
+import type { Post } from "../types/posts";
 
 const NewsIndex = () => {
   const [posts, setPosts] = useState<Post[]>([]);
@@ -64,7 +56,7 @@ const NewsIndex = () => {
                       {new Date(post.createdAt).toLocaleDateString("ja-JP")}
                     </time>
                     <div className="flex gap-2">
-                      {post.categories?.map((category: string) => {
+                      {post.categories.map((category: string) => {
                         return <span>{category}</span>;
                       })}
                     </div>
