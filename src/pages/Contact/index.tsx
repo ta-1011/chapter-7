@@ -55,7 +55,7 @@ const Contact = () => {
 
   // 送信の処理
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!valid()) return;
